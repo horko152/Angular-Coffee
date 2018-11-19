@@ -1,21 +1,104 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<header class="header" id="home">		  	
+  <div class="container">
+    <div class="row align-items-center justify-content-between d-flex" >
+      <div class="logo">
+        <a href="index.html"><img src="./assets/logo.png" alt="" title="" /></a>
+      </div>
+      <nav id="nav-menu-container">
+          <ul class="nav-menu">
+          <li class="link"><a class="link" href="#home">Home</a></li>
+          <li class="link"><a class="link" href="#about">About</a></li>
+          <li class="link"><a class="link" href="#coffee">Coffee</a></li>
+          <li *ngFor="let category of categories" 
+            routerLink="/category/{{category.id}}"
+            class="link" [class.active]="category === selectedCategory">
+            <span> {{category.name}}</span>
+          </li>
+        </ul>
+        </nav>		    		
+    </div>
+  </div>
+</header>
+<section class="banner-area" id="home">	
+  <div class="container">
+    <div class="row  d-flex align-items-center justify-content-start hg" >
+      <div class="banner-content col-lg-7">
+        <h6 class="text-white text-uppercase">Now you can feel the Energy</h6>
+        <h1>
+          Start your day with <br>
+          Coffee				
+        </h1>
+        <a href="#" class="primary-btn text-uppercase">Learn More</a>
+      </div>											
+    </div>
+  </div>
+</section> 
+
 
 <router-outlet></router-outlet>
+
+
+
+<footer class="footer-area section-gap">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-md-6 col-sm-6">
+        <div class="single-footer-widget">
+          <h6>About Us</h6>
+          <p>
+            We are here to help you. With us you will choose exactly that coffeehouse. And coffee thats fits you.
+          </p>
+          <p class="footer-text">
+            
+          </p>								
+        </div>
+      </div>
+      <div class="col-lg-5  col-md-6 col-sm-6">
+        <div class="single-footer-widget">
+          <h6>Newsletter</h6>
+          <p>Stay update with our latest</p>
+          <div class="" id="mc_embed_signup">
+            <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+              <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
+                              <button class="click-btn btn btn-default"><i class="fas fa-long-arrow-alt-right" ></i></button>
+                              <div style="position: absolute; left: -5000px;">
+                  <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                </div>
+
+              <div class="info pt-20"></div>
+            </form>
+          </div>
+        </div>
+      </div>						
+      <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+        <div class="single-footer-widget">
+          <h6>Follow Us</h6>
+          <p>Let us be social</p>
+          <div class="footer-social d-flex align-items-center">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-dribbble"></i></a>
+            <a href="#"><i class="fa-behance fa-behance"></i></a>
+          </div>
+        </div>
+      </div>							
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

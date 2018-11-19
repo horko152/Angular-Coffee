@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Category } from './category';
+import { CategoryService } from './category.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'coffee';
+
+  categories: Category[];
+
+  constructor( private categoryService: CategoryService) { }
+
+
+  getCategories(): void {
+    this.categoryService.getCategories()
+    .subscribe(categories => this.categories = categories );
+
+  }
+
+  ngOnInit() {
+    this.getCategories();
+  }
+
+
 }

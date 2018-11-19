@@ -1,0 +1,12 @@
+<div *ngIf="coffee">
+    {{coffee.id}}
+    <h2>{{coffee.name}}</h2>
+    
+    <h3>{{coffee.info}}</h3>
+    
+    <h4>{{coffee.address}}</h4>
+    
+    <ul>
+      <li *ngFor="let timeWork of coffee.timeWorks">{{timeWork.day}}</li>
+    </ul>
+</div>

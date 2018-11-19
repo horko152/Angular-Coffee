@@ -1,0 +1,13 @@
+<div *ngIf="category" class="content">
+  <div class="info">
+  {{category.info}}
+  </div>
+    <div class="push">
+      <ul>
+        <li *ngFor="let coffee of coffees"
+        routerLink="/coffee/{{coffee.id}}"
+        >{{coffee.name}}</li> 
+      </ul>
+      <a routerLink="/createcoffee/{{category.id}}">createNew</a>
+    </div>
+</div>

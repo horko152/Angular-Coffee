@@ -1,0 +1,44 @@
+<section class="video" id="about">
+  <div class="container">
+    <div class="row justify-content-start align-items-center">
+      <div class="col-lg-6 video-right justify-content-center align-items-center d-flex">
+        
+        <a href="https://www.youtube.com/watch?v=cbRfk5SlqAw"><img class="img-fluid" src="./assets/play-icon.png" alt=""></a>
+      </div>		
+      <div class="col-lg-6 video-left">
+        <h6>Beautiful video about coffee.</h6>
+        <h1>We hope you enjoy it.</h1>
+        <p><span>We are here to tell you interesting fact</span></p>
+        <p>
+          The optimum temperature for cooking coffee is 95-98 degrees. At lower temperatures, caffeine and saturated fatty acids are extracted to an insufficient extent, and at higher temperatures, acidity increases dramatically.	
+        </p>
+        <img src="./assets/signature.png" alt="" height="100px">
+      </div>
+    </div>
+  </div>	
+</section>
+
+<section *ngIf="typesCoffee" class="menu-area section-gap" id="coffee">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="menu-content pb-60 col-lg-10">
+          <div class="title text-center">
+            <h1 class="mb-10">What kind of Coffee do you know?</h1>
+            <p>Which one do you usually dream about?</p>
+          </div>
+        </div>
+      </div>						
+      <div class="row">
+        <div *ngFor="let type of typesCoffee" class="col-lg-4">
+          <div class="single-menu">
+            <div class="title-div justify-content-between d-flex">
+              <h4>{{type.type}}</h4>
+            </div>
+            <p>
+              {{type.info}}
+            </p>								
+          </div>
+        </div>														
+      </div>
+    </div>	
+  </section>
