@@ -11,7 +11,7 @@ import { Coffee } from './coffee';
 export class CoffeeService {
 
   private coffeeUrl = 'http://localhost:8080/api/coffee';
-
+ 
   constructor(
     private http: HttpClient
   ) { }
@@ -24,7 +24,17 @@ export class CoffeeService {
 
   addCoffee (coffee: Coffee, id: number): Observable<Coffee> {
     const url = this.coffeeUrl + '/' + id;
-    console.log(url);
     return this.http.post<Coffee>(url, coffee);
+  }
+
+  delete (id: number): Observable<Coffee> {
+    const url = this.coffeeUrl + '/' + id;
+    console.log(url)
+    return this.http.delete<Coffee>(url);
+  }
+
+  updateCoffee (coffee: Coffee): Observable<Coffee> {
+
+    return this.http.put<Coffee>(this.coffeeUrl, coffee);
   }
 }

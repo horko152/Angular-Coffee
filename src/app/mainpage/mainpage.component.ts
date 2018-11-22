@@ -17,7 +17,13 @@ export class MainpageComponent implements OnInit {
   ngOnInit() {
     this.typeCoffeService.getTypes()
     .subscribe(typesCoffee => this.typesCoffee = typesCoffee );
-    console.log(this.typesCoffee)
   }
 
+
+  delete(id ) {
+    this.typeCoffeService.delete(id)
+    .subscribe(type => {
+      console.log(type)
+    });
+  }
 }

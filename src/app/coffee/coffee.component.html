@@ -1,12 +1,38 @@
-<div *ngIf="coffee">
-    {{coffee.id}}
+<div *ngIf="coffee"
+      class="coffee">
     <h2>{{coffee.name}}</h2>
     
-    <h3>{{coffee.info}}</h3>
+    <h6>{{coffee.info}}</h6>
     
-    <h4>{{coffee.address}}</h4>
+    <h3>{{coffee.address}}</h3>
     
-    <ul>
-      <li *ngFor="let timeWork of coffee.timeWorks">{{timeWork.day}}</li>
-    </ul>
+    <table class="table">
+        <caption>Time of work</caption>
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col" *ngFor="let timeWork of coffee.timeWorks" > {{timeWork.day}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row" data-label="Account">Start Time</td>
+            <td  *ngFor="let timeWork of coffee.timeWorks">{{timeWork.startWork}}</td>
+          </tr>
+          <tr>
+            <td scope="row" data-label="Acount">End Time </td>
+            <td *ngFor="let timeWork of coffee.timeWorks">{{timeWork.endWork}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class='btn-center'>  
+          <a class="pulse-button" routerLink="/addtimework/{{coffee.id}}">add_time</a>
+      </div>
+      <div>
+          <i (click)="delete(coffee.id)" class="fas fa-trash"></i>
+      </div>
+      <div class='btn-center'>  
+          <a class="pulse-button" routerLink="/updatecoffee/{{coffee.id}}">update</a>
+      </div>
+    
 </div>

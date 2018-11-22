@@ -26,4 +26,11 @@ export class CoffeeComponent implements OnInit {
       .subscribe(coffee => this.coffee = coffee);
   }
 
+  delete(id ) {
+    this.coffeeService.delete(id)
+    .subscribe(type => {
+      console.log(type)
+    });
+  }
+
 }

@@ -5,9 +5,12 @@
     <div class="push">
       <ul>
         <li *ngFor="let coffee of coffees"
-        routerLink="/coffee/{{coffee.id}}"
+        routerLink="/coffee/{{coffee.id}}" 
         >{{coffee.name}}</li> 
       </ul>
-      <a routerLink="/createcoffee/{{category.id}}">createNew</a>
+      <div class='btn-center'>
+        <a class="pulse-button" routerLink="/createcoffee/{{category.id}}">createNew</a>
+      </div>
+      
     </div>
 </div>

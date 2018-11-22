@@ -32,13 +32,16 @@
         <div *ngFor="let type of typesCoffee" class="col-lg-4">
           <div class="single-menu">
             <div class="title-div justify-content-between d-flex">
-              <h4>{{type.type}}</h4>
+              <h4>{{type.type}}</h4><i (click)="delete(type.id)" class="fas fa-times cursor"></i>
             </div>
             <p>
               {{type.info}}
             </p>								
           </div>
         </div>														
+      </div>
+      <div class='btn-center'>
+        <a routerLink="/createtype" class='pulse-button'>ADD</a>
       </div>
     </div>	
   </section>

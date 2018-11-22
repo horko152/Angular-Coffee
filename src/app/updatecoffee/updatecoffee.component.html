@@ -1,0 +1,23 @@
+<div *ngIf="coffee" class="createCoffe">
+    <h1>Створення нового кафе</h1>
+    <form (ngSumbit)="onSubmit()" #UpdatecoffeeForm="ngForm">
+        <div>
+          <label for="name"> Title</label>
+          <input type="text" id="name" 
+                [(ngModel)]="coffee.name" name="name" 
+                #name="ngModel">
+        </div>
+        <div>
+          <label for="info"> Info</label>
+          <input type="text" id="info"
+                [(ngModel)]="coffee.info" name="info">
+        </div>
+        <div>
+            <label for="address"> address</label>
+            <input type="text" id="address"
+                  [(ngModel)]="coffee.address" name="address">
+          </div>
+        <button type="submit" (click)="update()" >Save Coffee</button>
+    </form>
+    
+  </div>

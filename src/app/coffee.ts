@@ -1,10 +1,5 @@
+import { timeWork } from './timework';
 
-class timeWork {
-    id: number;
-    startWork: string;
-    endWork: string;
-    day: string;
-}
 
 export class Coffee {
     id: number;

@@ -1,0 +1,25 @@
+<div>
+  <div>
+    <h1>Створення нового кафе</h1>
+    <form (ngSumbit)="onSubmit()" #timeworkForm="ngForm">
+        <div>
+          <label for="day"> day of week (Monday)</label>
+          <input type="text" id="day" 
+                [(ngModel)]="model.day" name="day" 
+                #name="ngModel">
+        </div>
+        <div>
+          <label for="startWork"> star Work</label>
+          <input type="text" id="info"
+                [(ngModel)]="model.startWork" name="startWork">
+        </div>
+        <div>
+            <label for="endWork"> end Work</label>
+            <input type="text" id="endWork"
+                  [(ngModel)]="model.endWork" name="endWork">
+          </div>
+        <button type="submit" (click)="save()">Save Time Work</button>
+    </form>
+    
+  </div>
+</div>

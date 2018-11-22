@@ -27,7 +27,6 @@ export class CreatecoffeeComponent implements OnInit {
 
   save() {
     const id = +this.route.snapshot.paramMap.get('id');
-    console.log(this.model);
     this.coffeeService.addCoffee(this.model, id)
     .subscribe(coffee => {
       console.log(coffee)

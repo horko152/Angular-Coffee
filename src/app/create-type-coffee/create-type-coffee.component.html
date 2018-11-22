@@ -1,10 +1,10 @@
 <div class="createCoffe">
   <h1>Створення нового кафе</h1>
-  <form (ngSumbit)="onSubmit()" #CoffeeForm="ngForm">
+  <form (ngSumbit)="onSubmit()" #TypecoffeeForm="ngForm">
       <div>
-        <label for="name"> Title</label>
+        <label for="type"> Title</label>
         <input type="text" id="name" 
-              [(ngModel)]="model.name" name="name" 
+              [(ngModel)]="model.type" name="type" 
               #name="ngModel">
       </div>
       <div>
@@ -12,11 +12,6 @@
         <input type="text" id="info"
               [(ngModel)]="model.info" name="info">
       </div>
-      <div>
-          <label for="address"> address</label>
-          <input type="text" id="address"
-                [(ngModel)]="model.address" name="address">
-        </div>
       <button type="submit" (click)="save()" >Save Coffee</button>
   </form>
   

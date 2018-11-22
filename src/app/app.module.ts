@@ -10,6 +10,9 @@ import { CategoryComponent } from './category/category.component';
 import { CoffeeComponent } from './coffee/coffee.component';
 import { CreatecoffeeComponent } from './createcoffee/createcoffee.component';
 import { from } from 'rxjs';
+import { AddtimeworkComponent } from './addtimework/addtimework.component';
+import { CreateTypeCoffeeComponent } from './create-type-coffee/create-type-coffee.component';
+import { UpdatecoffeeComponent } from './updatecoffee/updatecoffee.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { from } from 'rxjs';
     MainpageComponent,
     CategoryComponent,
     CoffeeComponent,
-    CreatecoffeeComponent
+    CreatecoffeeComponent,
+    AddtimeworkComponent,
+    CreateTypeCoffeeComponent,
+    UpdatecoffeeComponent
   ],
   imports: [
     BrowserModule,
